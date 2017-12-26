@@ -17,7 +17,7 @@ sudo cp blackbox_exporter-0.11.0.linux-amd64/blackbox_exporter /usr/local/bin/
 sudo chown blackbox_exporter:blackbox_exporter /usr/local/bin/blackbox_exporter
 
 cat ./blackbox/blackbox.yml | sudo tee /etc/blackbox/blackbox.yml
-cat ./blackbox/blackbox.service | sudo tee /etc/systemd/system/blackbox_exporter.service
+cat ./blackbox/blackbox_exporter.service | sudo tee /etc/systemd/system/blackbox_exporter.service
 
 sudo systemctl daemon-reload
 sudo systemctl enable blackbox_exporter
