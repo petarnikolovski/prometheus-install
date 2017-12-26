@@ -7,6 +7,7 @@ sudo adduser --no-create-home --disabled-login --shell /bin/false --gecos "Prome
 sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
 sudo touch /etc/prometheus/prometheus.yml
+sudo touch /etc/prometheus/prometheus.rules.yml
 
 # Assign ownership of the files above to prometheus user
 sudo chown -R prometheus:prometheus /etc/prometheus
