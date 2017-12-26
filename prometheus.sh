@@ -26,38 +26,8 @@ sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
 
-# prometheus.yml
-
-echo "global:
-  scrape_interval: 15s
-
-scrape_configs:
-  - job_name: 'prometheus'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['localhost:9090']
-  - job_name: 'node_exporter'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['localhost:9100']" | sudo tee /etc/prometheus/prometheus.yml
-
-# prometheus.service
-Description=Prometheus
-Wants=network-online.target
-After=network-online.target
-
-[Service]
-User=prometheus
-Group=prometheus
-Type=simple
-ExecStart=/usr/local/bin/prometheus \
-    --config.file /etc/prometheus/prometheus.yml \
-    --storage.tsdb.path /var/lib/prometheus/ \
-    --web.console.templates=/etc/prometheus/consoles \
-    --web.console.libraries=/etc/prometheus/console_libraries
-
-[Install]
-WantedBy=multi-user.target" | sudo tee /etc/systemd/system/prometheus.service
+cat ./prometheus/prometheus.yml | sudo tee /etc/prometheus/prometheus.yml
+cat ./prometheus/prometheus.service | sudo tee /etc/systemd/system/prometheus.service
 
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus
