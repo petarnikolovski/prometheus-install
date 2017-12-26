@@ -1,0 +1,14 @@
+[Unit]
+Description=Prometheus blackbox exporter
+After=network.target auditd.service
+
+[Service]
+User=blackbox_exporter
+Group=blackbox_exporter
+Type=simple
+ExecStart=/usr/local/bin/blackbox_exporter \
+    --config.file=/etc/blackbox/blackbox.yml
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
