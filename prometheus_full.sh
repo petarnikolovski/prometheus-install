@@ -5,9 +5,9 @@
 # Prometheus installation. It's a lousy script though.
 
 # Example:
-# chmod +x prometheus.sh
+# chmod +x prometheus_full.sh
 # sudo pwd
-# ./prometheus.sh
+# ./prometheus_full.sh
 
 sudo adduser --no-create-home --disabled-login --shell /bin/false --gecos "Prometheus Monitoring User" prometheus
 sudo adduser --no-create-home --disabled-login --shell /bin/false --gecos "Node Exporter User" node_exporter
