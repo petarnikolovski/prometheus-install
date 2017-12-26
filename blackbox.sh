@@ -25,5 +25,5 @@ sudo systemctl enable blackbox_exporter
 sudo systemctl start blackbox_exporter
 
 # Installation cleanup
-sudo rm blackbox_exporter-0.11.0.linux-amd64.tar.gz
-sudo rm -rf blackbox_exporter-0.11.0.linux-amd64
+rm blackbox_exporter-0.11.0.linux-amd64.tar.gz
+rm -rf blackbox_exporter-0.11.0.linux-amd64

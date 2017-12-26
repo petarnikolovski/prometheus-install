@@ -37,5 +37,5 @@ sudo systemctl enable prometheus
 sudo systemctl start prometheus
 
 # Installation cleanup
-sudo rm prometheus-2.0.0.linux-amd64.tar.gz
-sudo rm -rf prometheus-2.0.0.linux-amd64
+rm prometheus-2.0.0.linux-amd64.tar.gz
+rm -rf prometheus-2.0.0.linux-amd64

@@ -18,5 +18,5 @@ sudo systemctl enable node_exporter
 sudo systemctl start node_exporter
 
 # Installation cleanup
-sudo rm node_exporter-0.15.2.linux-amd64.tar.gz
-sudo rm -rf node_exporter-0.15.2.linux-amd64
+rm node_exporter-0.15.2.linux-amd64.tar.gz
+rm -rf node_exporter-0.15.2.linux-amd64

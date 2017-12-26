@@ -32,5 +32,5 @@ sudo systemctl enable alertmanager
 sudo systemctl start alertmanager
 
 # Installation cleanup
-sudo rm alertmanager-0.12.0.linux-amd64.tar.gz
-sudo rm -rf alertmanager-0.12.0.linux-amd64
+rm alertmanager-0.12.0.linux-amd64.tar.gz
+rm -rf alertmanager-0.12.0.linux-amd64

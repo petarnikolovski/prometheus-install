@@ -13,4 +13,4 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 
 # Installation cleanup
-sudo rm grafana_4.6.3_amd64.deb
+rm grafana_4.6.3_amd64.deb
