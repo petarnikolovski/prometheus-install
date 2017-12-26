@@ -30,6 +30,7 @@ sudo chown prometheus:prometheus /usr/local/bin/promtool
 
 # Populate configuration files
 cat ./prometheus/prometheus.yml | sudo tee /etc/prometheus/prometheus.yml
+cat ./prometheus/prometheus.rules.yml | sudo tee /etc/prometheus/prometheus.rules.yml
 cat ./prometheus/prometheus.service | sudo tee /etc/systemd/system/prometheus.service
 
 # systemd
