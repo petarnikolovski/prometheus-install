@@ -20,7 +20,7 @@ I have written few Prometheus instructions that you may or may not find useful:
 
 * [How to Write Rules for Prometheus](https://petargitnik.github.io/blog/2018/01/04/how-to-write-rules-for-prometheus)
 * [How to Install Alertmanager on Ubuntu 16.04](https://petargitnik.github.io/blog/2018/01/03/how-to-install-alertmanager-on-ubuntu-16.04)
-* [https://petargitnik.github.io/blog/2018/01/07/how-to-install-mysql-exporter-for-prometheus-2.0-on-ubuntu-16.04](https://petargitnik.github.io/blog/2018/01/07/how-to-install-mysql-exporter-for-prometheus-2.0-on-ubuntu-16.04)
+* [How to Install MySQL Exporter for Prometheus 2.0 on Ubuntu 16.04](https://petargitnik.github.io/blog/2018/01/07/how-to-install-mysql-exporter-for-prometheus-2.0-on-ubuntu-16.04)
 
 If you find any mistake, or suggestion for enhancement that would be great.
 
