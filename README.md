@@ -1,4 +1,4 @@
-# Prometheus 2.0.0 Installation Script for Ubuntu 16.04 LTS
+# Prometheus 2.2.1 Installation Script for Ubuntu 16.04 LTS
 
 **Important:** This is a work in progress. Do not use this.
 
