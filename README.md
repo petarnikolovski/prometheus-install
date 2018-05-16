@@ -2,6 +2,10 @@
 
 **Important:** This is a work in progress. Do not use this.
 
+**Even more important:** If you actually plan to use this do not forget to edit configuration files to your needs (service files, YAML configuration files, etc.). Configuration files provided here are just generic files.
+
+This installation script should work on Ubuntu 18.04 LTS also.
+
 More about it here: [gist](https://gist.github.com/petarGitNik/18ae938aaef4c4ff58189df8a4fc7de9).
 
 This script downloads the files in the current directory. You could change this.
