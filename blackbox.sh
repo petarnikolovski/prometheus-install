@@ -9,10 +9,12 @@ sudo touch /etc/blackbox/blackbox.yml
 sudo chown -R blackbox_exporter:blackbox_exporter /etc/blackbox
 
 # Download blackbox_exporter and copy utilities to where they should be in the filesystem
-wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.12.0/blackbox_exporter-0.12.0.linux-amd64.tar.gz
-tar xvzf blackbox_exporter-0.12.0.linux-amd64.tar.gz
+#VERSION=0.12.0
+VERSION=$(curl https://raw.githubusercontent.com/prometheus/blackbox_exporter/master/VERSION)
+wget https://github.com/prometheus/blackbox_exporter/releases/download/v${VERSION}/blackbox_exporter-${VERSION}.linux-amd64.tar.gz
+tar xvzf blackbox_exporter-${VERSION}.linux-amd64.tar.gz
 
-sudo cp blackbox_exporter-0.12.0.linux-amd64/blackbox_exporter /usr/local/bin/
+sudo cp blackbox_exporter-${VERSION}.linux-amd64/blackbox_exporter /usr/local/bin/
 sudo chown blackbox_exporter:blackbox_exporter /usr/local/bin/blackbox_exporter
 
 # Populate configuration files
@@ -25,5 +27,5 @@ sudo systemctl enable blackbox_exporter
 sudo systemctl start blackbox_exporter
 
 # Installation cleanup
-rm blackbox_exporter-0.12.0.linux-amd64.tar.gz
-rm -rf blackbox_exporter-0.12.0.linux-amd64
+rm blackbox_exporter-${VERSION}.linux-amd64.tar.gz
+rm -rf blackbox_exporter-${VERSION}.linux-amd64
