@@ -14,11 +14,13 @@ sudo chown -R alertmanager:alertmanager /etc/alertmanager
 sudo chown -R alertmanager:alertmanager /var/lib/alertmanager
 
 # Download alertmanager and copy utilities to where they should be in the filesystem
-wget https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-amd64.tar.gz
-tar xvzf alertmanager-0.15.0-rc.0.linux-amd64.tar.gz
+#VERSION=0.15.0-rc.0
+VERSION=$(curl https://raw.githubusercontent.com/prometheus/alertmanager/master/VERSION)
+wget https://github.com/prometheus/alertmanager/releases/download/v${VERSION}/alertmanager-${VERSION}.linux-amd64.tar.gz
+tar xvzf alertmanager-${VERSION}.linux-amd64.tar.gz
 
-sudo cp alertmanager-0.15.0-rc.0.linux-amd64/alertmanager /usr/local/bin/
-sudo cp alertmanager-0.15.0-rc.0.linux-amd64/amtool /usr/local/bin/
+sudo cp alertmanager-${VERSION}.linux-amd64/alertmanager /usr/local/bin/
+sudo cp alertmanager-${VERSION}.linux-amd64/amtool /usr/local/bin/
 sudo chown alertmanager:alertmanager /usr/local/bin/alertmanager
 sudo chown alertmanager:alertmanager /usr/local/bin/amtool
 
@@ -32,5 +34,5 @@ sudo systemctl enable alertmanager
 sudo systemctl start alertmanager
 
 # Installation cleanup
-rm alertmanager-0.15.0-rc.0.linux-amd64.tar.gz
-rm -rf alertmanager-0.15.0-rc.0.linux-amd64
+rm alertmanager-${VERSION}.linux-amd64.tar.gz
+rm -rf alertmanager-${VERSION}.linux-amd64
